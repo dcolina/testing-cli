@@ -1,0 +1,93 @@
+{
+  "clazz" : "SimpleContentType",
+  "dotCMSObjectType" : "ContentType",
+  "id" : "8c598c65fbdb35fdbf3474fd1c7f53a3",
+  "name" : "Datetest",
+  "variable" : "Datetest",
+  "modDate" : "2023-11-27T19:05:16.000+00:00",
+  "iDate" : "2023-11-27T19:04:47.000+00:00",
+  "host" : "48190c8c-42c4-46af-8d1a-0cd5db894797",
+  "folder" : "SYSTEM_FOLDER",
+  "siteName" : "demo.dotcms.com",
+  "folderPath" : "/",
+  "icon" : "event_note",
+  "baseType" : "CONTENT",
+  "layout" : [ {
+    "divider" : {
+      "clazz" : "RowField",
+      "id" : "7d505ce1f8276a9d0a59597fd8344f33",
+      "modDate" : "2023-11-27T19:05:03.000+00:00",
+      "name" : "fields-0",
+      "contentTypeId" : "8c598c65fbdb35fdbf3474fd1c7f53a3",
+      "fieldType" : "Row",
+      "fieldTypeLabel" : "Row",
+      "iDate" : "2023-11-27T19:04:47.000+00:00",
+      "variable" : "fields0",
+      "dataType" : "SYSTEM"
+    },
+    "columns" : [ {
+      "columnDivider" : {
+        "clazz" : "ColumnField",
+        "id" : "8147bba4dfcaa0457886afd9802530c6",
+        "modDate" : "2023-11-27T19:05:03.000+00:00",
+        "name" : "fields-1",
+        "sortOrder" : 1,
+        "contentTypeId" : "8c598c65fbdb35fdbf3474fd1c7f53a3",
+        "fieldType" : "Column",
+        "fieldTypeLabel" : "Column",
+        "iDate" : "2023-11-27T19:04:47.000+00:00",
+        "variable" : "fields1",
+        "dataType" : "SYSTEM"
+      },
+      "fields" : [ {
+        "clazz" : "DateField",
+        "id" : "f441f721dd2f1192ba2d994975cf2a5f",
+        "modDate" : "2023-11-27T19:05:03.000+00:00",
+        "name" : "date1",
+        "variable" : "date1",
+        "sortOrder" : 2,
+        "contentTypeId" : "8c598c65fbdb35fdbf3474fd1c7f53a3",
+        "fieldType" : "Date",
+        "fieldTypeLabel" : "Date",
+        "iDate" : "2023-11-27T19:05:02.000+00:00",
+        "dataType" : "DATE"
+      }, {
+        "clazz" : "DateTimeField",
+        "id" : "78811f68a9aa014a542f34316ae10459",
+        "modDate" : "2023-11-27T19:05:16.000+00:00",
+        "name" : "date2",
+        "variable" : "date2",
+        "sortOrder" : 3,
+        "contentTypeId" : "8c598c65fbdb35fdbf3474fd1c7f53a3",
+        "fieldType" : "Date-and-Time",
+        "fieldTypeLabel" : "Date and Time",
+        "iDate" : "2023-11-27T19:05:16.000+00:00",
+        "dataType" : "DATE"
+      } ]
+    } ]
+  } ],
+  "workflows" : [ {
+    "archived" : false,
+    "creationDate" : "2023-11-27T19:22:24.178+00:00",
+    "defaultScheme" : false,
+    "description" : "",
+    "entryActionId" : null,
+    "id" : "d61a59e1-a49c-46f2-a929-db2b4bfa88b2",
+    "mandatory" : false,
+    "modDate" : "2023-11-27T12:03:03.144+00:00",
+    "name" : "System Workflow",
+    "system" : true
+  } ],
+  "systemActionMappings" : [ {
+    "archived" : false,
+    "creationDate" : 1701112944178,
+    "defaultScheme" : false,
+    "description" : "",
+    "entryActionId" : null,
+    "id" : "d61a59e1-a49c-46f2-a929-db2b4bfa88b2",
+    "mandatory" : false,
+    "modDate" : 1701086583144,
+    "name" : "System Workflow",
+    "system" : true
+  } ]
+}
