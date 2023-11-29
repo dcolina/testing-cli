@@ -91,7 +91,7 @@ jobs:
 
           VARS=${{ env.DOT_CLI_OPTS }}
 
-          if [[ -n ${{ env.DOT_CLI_OPTS }} ]]; then
+          if [[ -n $VARS ]]; then
             OPTS="${{ env.DOT_CLI_OPTS }}"
           else
             OPTS=""
