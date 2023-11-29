@@ -76,6 +76,8 @@ _setup_CLI(){
     export DOTCMS_CLIENT_SERVERS_DEFAULT=$API_URL
     export QUARKUS_LOG_FILE_PATH=$DOT_CLI_HOME"dotcms-cli.log"
 
+    touch "$QUARKUS_LOG_FILE_PATH"
+
 }
 
 print_log(){
