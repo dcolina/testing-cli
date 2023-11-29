@@ -100,10 +100,10 @@ _run_cli_push(){
       export QUARKUS_LOG_FILE_PATH="$DOT_CLI_HOME"dotcms-cli.log
 
       if [[ -z $push_opts ]]; then
-        bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--help" # --token="$token" --errors
+        bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--token" "$token" 
         echo "No push options provided"
       else
-        /tmp/dot-cli/run-java.sh push "$workspace_path" $push_opts --token="$token"
+        bash /tmp/dot-cli/run-java.sh push "$workspace_path" $push_opts "--token" "$token"
         echo "Push options provided: $push_opts"
       fi
       # cmd="bash /tmp/dot-cli/run-java.sh push $workspace_path $push_opts --token=$token"
