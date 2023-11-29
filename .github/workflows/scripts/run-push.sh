@@ -128,14 +128,14 @@ install_cli(){
 }
 
 run_cli_push(){
+
+    echo "run_cli_push ARGS: $@"
+
     workspace_path=$1
     token=$2
     push_opts=$3
 
-    echo "PUSH OPTS:"
-    echo "$push_opts"
-
-    if [ -z "$workspace_path" ]; then
+    if [ -z "$push_opts" ]; then
       return_code=$(_run_cli_push "$workspace_path" "$token")
     else
       return_code=$(_run_cli_push "$workspace_path" "$token" "$push_opts")
