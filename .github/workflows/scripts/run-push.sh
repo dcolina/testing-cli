@@ -135,6 +135,12 @@ run_cli_push(){
     echo "PUSH OPTS:"
     echo "$push_opts"
 
-    return_code=$(_run_cli_push "$workspace_path" "$token" "$push_opts")
+    if [ -z "$workspace_path" ]; then
+      return_code=$(_run_cli_push "$workspace_path" "$token")
+    else
+      return_code=$(_run_cli_push "$workspace_path" "$token" "$push_opts")
+    fi
+
+    # return_code=$(_run_cli_push "$workspace_path" "$token" "$push_opts")
     echo "$return_code"
 }
