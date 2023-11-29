@@ -108,7 +108,7 @@ _run_cli_push(){
 
       # bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--removeAssets" "--removeFolders" "--token" "$token" "--errors"
 
-      # bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--token=$token"
+      bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--token=$token"
 
       # if [[ -z $push_opts ]]; then
       #   bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--token" "$token" 
