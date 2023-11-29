@@ -76,8 +76,6 @@ _setup_CLI(){
     export DOTCMS_CLIENT_SERVERS_DEFAULT=$API_URL
     export QUARKUS_LOG_FILE_PATH=$DOT_CLI_HOME"dotcms-cli.log"
 
-    touch "$QUARKUS_LOG_FILE_PATH"
-
 }
 
 print_log(){
@@ -86,9 +84,6 @@ print_log(){
 }
 
 _run_cli_push(){
-
-      echo "_run_cli_push ARGS: $@"
-
       workspace_path=$1
       token=$2
       push_opts=$3
@@ -101,24 +96,8 @@ _run_cli_push(){
       export JAVA_APP_NAME="dotcms-cli"
       # Log file
       export QUARKUS_LOG_FILE_PATH="$DOT_CLI_HOME"dotcms-cli.log
-
-      echo "Running CLI push"
-
-      bash /tmp/dot-cli/run-java.sh "push" "--help"
-
-      # bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--removeAssets" "--removeFolders" "--token" "$token" "--errors"
-
-      bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--token=$token"
-
-      # if [[ -z $push_opts ]]; then
-      #   bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--token" "$token" 
-      #   echo "No push options provided"
-      # else
-      #   bash /tmp/dot-cli/run-java.sh push "$workspace_path" $push_opts "--token" "$token"
-      #   echo "Push options provided: $push_opts"
-      # fi
-      # cmd="bash /tmp/dot-cli/run-java.sh push $workspace_path $push_opts --token=$token"
-      # eval "$cmd"
+      cmd="bash /tmp/dot-cli/run-java.sh push $workspace_path $push_opts --token=$token"
+      eval "$cmd"
       export exit_code=$?
       echo $exit_code
 }
@@ -135,19 +114,13 @@ install_cli(){
 }
 
 run_cli_push(){
-
-    echo "run_cli_push ARGS: $@"
-
     workspace_path=$1
     token=$2
     push_opts=$3
 
-    if [ -z "$push_opts" ]; then
-      return_code=$(_run_cli_push "$workspace_path" "$token")
-    else
-      return_code=$(_run_cli_push "$workspace_path" "$token" "$push_opts")
-    fi
+    echo "PUSH OPTS:"
+    echo "$push_opts"
 
-    # return_code=$(_run_cli_push "$workspace_path" "$token" "$push_opts")
+    return_code=$(_run_cli_push "$workspace_path" "$token" "$push_opts")
     echo "$return_code"
 }
