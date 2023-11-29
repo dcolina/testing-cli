@@ -104,7 +104,9 @@ _run_cli_push(){
 
       echo "Running CLI push"
 
-      bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--removeAssets" "--removeFolders" "--token" "$token" "--errors"
+      bash /tmp/dot-cli/run-java.sh "push" "--help"
+
+      # bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--removeAssets" "--removeFolders" "--token" "$token" "--errors"
 
       # bash /tmp/dot-cli/run-java.sh "push" "$workspace_path" "--token=$token"
 
